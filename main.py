@@ -3,6 +3,11 @@ from pydantic import BaseModel
 import joblib
 import re
 
+@app.get("/")
+def root():
+    return {"message": "Expense Categorization API is working. Use /predict."}
+
+
 # 1. Start the app
 app = FastAPI()
 
